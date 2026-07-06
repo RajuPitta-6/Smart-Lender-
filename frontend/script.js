@@ -1,4 +1,4 @@
-const API_URL = "https://smart-lender-g9fm.onrender.com/";
+const API_URL = "https://smart-lender-g9fm.onrender.com";
 
 const form = document.getElementById("loanForm");
 const result = document.getElementById("result");
@@ -23,7 +23,7 @@ form.addEventListener("submit", async (event) => {
     };
 
     try {
-        const response = await fetch(`${API_URL}`, {
+        const response = await fetch(`${API_URL}/predict`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
