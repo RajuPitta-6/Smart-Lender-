@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Lender</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>Smart Lender</h1>
+
+            <p>
+                Loan Eligibility Prediction
+            </p>
+
+            <form id="loanForm">
+
+                <div class="grid">
+
+                    <input
+                        type="text"
+                        id="applicant_name"
+                        placeholder="Applicant Name"
+                        required>
+
+                    <select id="gender">
+
+                        <option>Male</option>
+
+                        <option>Female</option>
+
+                    </select>
+
+                    <select id="education">
+
+                        <option>Graduate</option>
+
+                        <option>Not Graduate</option>
+
+                    </select>
+
+                    <select id="self_employed">
+
+                        <option>No</option>
+
+                        <option>Yes</option>
+
+                    </select>
+
+                    <input
+                        type="number"
+                        id="no_of_dependents"
+                        placeholder="Dependents"
+                        required>
+
+                    <input
+                        type="number"
+                        id="income_annum"
+                        placeholder="Income"
+                        required>
+
+                    <input
+                        type="number"
+                        id="loan_amount"
+                        placeholder="Loan Amount"
+                        required>
+
+                    <input
+                        type="number"
+                        id="loan_term"
+                        placeholder="Loan Term"
+                        required>
+
+                    <input
+                        type="number"
+                        id="cibil_score"
+                        placeholder="CIBIL Score"
+                        required>
+
+                    <input
+                        type="number"
+                        id="residential_assets_value"
+                        placeholder="Residential Assets"
+                        required>
+
+                    <input
+                        type="number"
+                        id="commercial_assets_value"
+                        placeholder="Commercial Assets"
+                        required>
+
+                    <input
+                        type="number"
+                        id="luxury_assets_value"
+                        placeholder="Luxury Assets"
+                        required>
+
+                    <input
+                        type="number"
+                        id="bank_asset_value"
+                        placeholder="Bank Assets"
+                        required>
+
+                </div>
+
+                <button type="submit">
+
+                    Predict Loan
+
+                </button>
+
+            </form>
+
+            <div id="result">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

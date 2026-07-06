@@ -1,0 +1,26 @@
+{
+    "Decision Tree": {
+        "Accuracy": 0.9848,
+        "Precision": 0.985,
+        "Recall": 0.9906,
+        "F1 Score": 0.9878
+    },
+    "Random Forest": {
+        "Accuracy": 0.9824,
+        "Precision": 0.9831,
+        "Recall": 0.9887,
+        "F1 Score": 0.9859
+    },
+    "KNN": {
+        "Accuracy": 0.8958,
+        "Precision": 0.9108,
+        "Recall": 0.9228,
+        "F1 Score": 0.9167
+    },
+    "XGBoost": {
+        "Accuracy": 0.9859,
+        "Precision": 0.9869,
+        "Recall": 0.9906,
+        "F1 Score": 0.9887
+    }
+}
