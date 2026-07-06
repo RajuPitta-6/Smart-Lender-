@@ -1,3 +1,5 @@
+const API_URL = "http://127.0.0.1:8000";
+
 const form = document.getElementById("loanForm");
 const result = document.getElementById("result");
 
@@ -17,37 +19,28 @@ form.addEventListener("submit", async (event) => {
         income_annum: Number(document.getElementById("income_annum").value),
         loan_amount: Number(document.getElementById("loan_amount").value),
         loan_term: Number(document.getElementById("loan_term").value),
-        cibil_score: Number(document.getElementById("cibil_score").value),
-        residential_assets_value: Number(document.getElementById("residential_assets_value").value),
-        commercial_assets_value: Number(document.getElementById("commercial_assets_value").value),
-        luxury_assets_value: Number(document.getElementById("luxury_assets_value").value),
-        bank_asset_value: Number(document.getElementById("bank_asset_value").value)
+        cibil_score: Number(document.getElementById("cibil_score").value)
     };
 
     try {
-
-        const response = await fetch(
-            "http://127.0.0.1:8000/predict",
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(applicant)
-            }
-        );
+        const response = await fetch(`${API_URL}/predict`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(applicant)
+        });
 
         if (!response.ok) {
-            throw new Error("Prediction Failed");
+            throw new Error("Prediction failed.");
         }
 
         const data = await response.json();
 
-        if (data.prediction === "Approved") {
-            result.className = "approved";
-        } else {
-            result.className = "rejected";
-        }
+        result.className =
+            data.prediction === "Approved"
+                ? "approved"
+                : "rejected";
 
         result.innerHTML = `
             <h2>${data.prediction}</h2>
@@ -64,5 +57,4 @@ form.addEventListener("submit", async (event) => {
             <p>${error.message}</p>
         `;
     }
-
 });

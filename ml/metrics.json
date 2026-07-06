@@ -1,26 +1,26 @@
 {
     "Decision Tree": {
-        "Accuracy": 0.9848,
-        "Precision": 0.985,
-        "Recall": 0.9906,
-        "F1 Score": 0.9878
+        "Accuracy": 0.9836,
+        "Precision": 0.9887,
+        "Recall": 0.9849,
+        "F1 Score": 0.9868
     },
     "Random Forest": {
-        "Accuracy": 0.9824,
-        "Precision": 0.9831,
-        "Recall": 0.9887,
-        "F1 Score": 0.9859
+        "Accuracy": 0.9813,
+        "Precision": 0.9795,
+        "Recall": 0.9906,
+        "F1 Score": 0.985
     },
     "KNN": {
-        "Accuracy": 0.8958,
-        "Precision": 0.9108,
-        "Recall": 0.9228,
-        "F1 Score": 0.9167
+        "Accuracy": 0.9286,
+        "Precision": 0.9401,
+        "Recall": 0.9454,
+        "F1 Score": 0.9427
     },
     "XGBoost": {
-        "Accuracy": 0.9859,
-        "Precision": 0.9869,
-        "Recall": 0.9906,
-        "F1 Score": 0.9887
+        "Accuracy": 0.9895,
+        "Precision": 0.9888,
+        "Recall": 0.9944,
+        "F1 Score": 0.9915
     }
 }

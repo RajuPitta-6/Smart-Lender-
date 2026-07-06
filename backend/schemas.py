@@ -13,11 +13,7 @@ class ApplicantBase(BaseModel):
     loan_amount: float
     loan_term: int
     cibil_score: int
-    residential_assets_value: float
-    commercial_assets_value: float
-    luxury_assets_value: float
-    bank_asset_value: float
-
+    
 
 class ApplicantCreate(ApplicantBase):
     pass

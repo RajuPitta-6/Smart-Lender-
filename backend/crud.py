@@ -21,10 +21,6 @@ def create_applicant(
         loan_amount=applicant.loan_amount,
         loan_term=applicant.loan_term,
         cibil_score=applicant.cibil_score,
-        residential_assets_value=applicant.residential_assets_value,
-        commercial_assets_value=applicant.commercial_assets_value,
-        luxury_assets_value=applicant.luxury_assets_value,
-        bank_asset_value=applicant.bank_asset_value,
         prediction=prediction,
         confidence=confidence,
     )

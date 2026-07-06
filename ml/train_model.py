@@ -128,7 +128,17 @@ def prepare_features(df: pd.DataFrame):
     # Remove Loan ID
     df = df.drop(columns=["loan_id"])
 
-    X = df.drop(columns=["loan_status"])
+    X = df[
+    [
+        "no_of_dependents",
+        "education",
+        "self_employed",
+        "income_annum",
+        "loan_amount",
+        "loan_term",
+        "cibil_score",
+    ]
+]
 
     y = df["loan_status"].map({
     "Rejected": 0,
@@ -172,15 +182,11 @@ def build_preprocessor():
     ]
 
     numerical_features = [
-        "no_of_dependents",
-        "income_annum",
-        "loan_amount",
-        "loan_term",
-        "cibil_score",
-        "residential_assets_value",
-        "commercial_assets_value",
-        "luxury_assets_value",
-        "bank_asset_value",
+    "no_of_dependents",
+    "income_annum",
+    "loan_amount",
+    "loan_term",
+    "cibil_score",
     ]
 
     preprocessor = ColumnTransformer(

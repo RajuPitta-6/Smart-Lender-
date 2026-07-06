@@ -60,26 +60,7 @@ class Applicant(Base):
         nullable=False,
     )
 
-    residential_assets_value: Mapped[float] = mapped_column(
-        Float,
-        nullable=False,
-    )
-
-    commercial_assets_value: Mapped[float] = mapped_column(
-        Float,
-        nullable=False,
-    )
-
-    luxury_assets_value: Mapped[float] = mapped_column(
-        Float,
-        nullable=False,
-    )
-
-    bank_asset_value: Mapped[float] = mapped_column(
-        Float,
-        nullable=False,
-    )
-
+    
     prediction: Mapped[str] = mapped_column(
         String(20),
         nullable=False,
